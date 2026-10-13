@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Команда фонда в октябре</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Документ 960px: главное → раскладка Екатерина | стык | Мария → маршрут Марии → новый клиент → остальные роли → правила. Бренд Integrity. */
+:root {
+  --bg: #FBFAF7;
+  --surface: #F5F2EC;
+  --sand: #F0E6DB;
+  --ink: #262624;
+  --muted: #6B675F;
+  --line: #E2DCD2;
+  --petrol: #1C4A43;
+  --petrol-soft: #E3ECE9;
+  --copper: #9A5F35;
+  --copper-fill: #B9794B;
+  --copper-soft: #F6EADF;
+  --on-petrol: #FBFAF7;
+  --font-sans: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131918; --surface: #1A2220; --sand: #2A2520; --ink: #ECE7DE; --muted: #A9A296;
+    --line: #2C3633; --petrol: #8CC2B5; --petrol-soft: #1E302C; --copper: #D9A57C;
+    --copper-fill: #C98A5B; --copper-soft: #2E241C; --on-petrol: #131918; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131918; --surface: #1A2220; --sand: #2A2520; --ink: #ECE7DE; --muted: #A9A296;
+  --line: #2C3633; --petrol: #8CC2B5; --petrol-soft: #1E302C; --copper: #D9A57C;
+  --copper-fill: #C98A5B; --copper-soft: #2E241C; --on-petrol: #131918; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 15.5px; line-height: 1.55; padding-inline: 20px; padding-block: 0 64px; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.2; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; }
+.wrap { max-width: 960px; margin: 0 auto; display: grid; gap: 56px; }
+.eyebrow { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--copper); }
+.muted { color: var(--muted); }
+:focus-visible { outline: 2px solid var(--copper-fill); outline-offset: 2px; border-radius: 4px; }
+
+header.top { padding-top: 44px; display: grid; gap: 14px; }
+header .mark { display: flex; align-items: center; gap: 12px; }
+header h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 700; letter-spacing: -.01em; }
+header .lead { font-size: 17px; max-width: 68ch; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 20px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+
+nav.sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); margin-inline: -20px; padding-inline: 20px; }
+nav.sections .row { max-width: 960px; margin: 0 auto; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+nav.sections a { white-space: nowrap; text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; padding: 12px 10px; border-bottom: 2px solid transparent; }
+nav.sections a:hover { color: var(--ink); border-bottom-color: var(--copper-fill); }
+
+section { display: grid; gap: 18px; scroll-margin-top: 56px; }
+section > * { min-width: 0; }
+.sec-head { display: grid; gap: 6px; }
+.sec-head h2 { font-size: 24px; font-weight: 650; }
+.sec-head p { color: var(--muted); max-width: 68ch; }
+
+/* главное */
+.thesis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.th { border-top: 3px solid var(--petrol); padding-top: 12px; display: grid; gap: 4px; align-content: start; }
+.th.cu { border-top-color: var(--copper-fill); }
+.th .who { font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.th b { font-size: 18px; font-weight: 650; line-height: 1.3; }
+.th p { font-size: 14.5px; }
+
+/* раскладка */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) 200px minmax(0, 1fr); gap: 0; align-items: stretch; }
+.lane { border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 12px; align-content: start; background: var(--bg); }
+.lane.k { border-color: var(--petrol); }
+.lane.m { border-color: var(--copper-fill); }
+.lane .tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.lane.k .tag { color: var(--petrol); }
+.lane.m .tag { color: var(--copper); }
+.lane h3 { font-size: 20px; font-weight: 650; }
+.lane .pos { font-size: 13.5px; color: var(--muted); margin-top: -8px; }
+.lane .one { font-size: 15px; font-weight: 500; }
+.lbl { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.lane ul { padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; }
+.lane ul.not li { color: var(--muted); }
+.joint { display: grid; align-content: center; gap: 10px; padding: 16px 14px; position: relative; }
+.joint::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed var(--line); z-index: 0; }
+.joint .box { position: relative; z-index: 1; background: var(--surface); border-radius: 10px; padding: 12px; display: grid; gap: 6px; text-align: center; }
+.joint .box b { font-size: 14px; font-weight: 600; }
+.joint .box span { font-size: 13px; color: var(--muted); line-height: 1.45; }
+
+/* маршрут Марии */
+.route { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; counter-reset: s; }
+.stop { position: relative; padding: 0 10px 0 0; display: grid; gap: 6px; align-content: start; }
+.stop .dot { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--copper-fill); color: var(--on-petrol); font-family: var(--font-mono); font-size: 12px; position: relative; z-index: 1; box-shadow: 0 0 0 4px var(--bg); }
+.stop.first .dot { background: var(--petrol); }
+.stop::after { content: ""; position: absolute; left: 30px; right: 0; top: 14px; height: 2px; background: var(--line); }
+.stop:last-child::after { display: none; }
+.stop b { font-size: 15.5px; font-weight: 650; }
+.stop p { font-size: 13.5px; color: var(--muted); }
+.cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.card { background: var(--surface); border-radius: var(--r); padding: 18px; display: grid; gap: 10px; align-content: start; }
+.card h3 { font-size: 16.5px; font-weight: 650; }
+.card ul { padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; }
+.forks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.fork { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--bg); display: grid; gap: 2px; }
+.fork b { font-size: 14px; font-weight: 600; }
+.fork span { font-size: 13px; color: var(--muted); }
+
+/* новый клиент */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.st { border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 6px; align-content: start; }
+.st.new { border-color: var(--copper-fill); background: var(--copper-soft); }
+.st .n { font-family: var(--font-mono); font-size: 12px; color: var(--copper); }
+.st .who { font-size: 13px; color: var(--muted); }
+.st b { font-weight: 600; font-size: 15px; }
+.st p { font-size: 14px; }
+.badge { display: inline-block; font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; padding: 2px 8px; border-radius: 999px; background: var(--copper-fill); color: var(--on-petrol); justify-self: start; }
+
+/* остальные */
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.p { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); display: grid; gap: 2px; }
+.p b { font-weight: 600; }
+.p .pos { font-size: 13px; color: var(--muted); }
+.p p { font-size: 14.5px; }
+
+.rules { display: grid; gap: 8px; padding-left: 18px; font-size: 15px; max-width: 72ch; }
+.note { background: var(--petrol-soft); border-radius: var(--r); padding: 14px 16px; font-size: 14.5px; }
+.note b { font-weight: 600; }
+footer { font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+
+@media (max-width: 820px) {
+  .split { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .joint { padding: 10px 24px; }
+  .joint::before { left: 50%; right: auto; top: 0; bottom: 0; border-top: 0; border-left: 2px dashed var(--line); }
+  .thesis, .cols2, .flow { grid-template-columns: minmax(0, 1fr); }
+  .route { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .stop { grid-template-columns: 30px minmax(0, 1fr); column-gap: 12px; }
+  .stop .dot { grid-row: span 2; }
+  .stop::after { left: 14px; right: auto; top: 30px; bottom: -14px; width: 2px; height: auto; }
+}
+@media (max-width: 480px) { .forks { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head><body>
+
+
+<header class="top wrap">
+  <div class="mark">
+    <svg width="44" height="14" viewBox="0 0 44 14" aria-hidden="true"><circle cx="6" cy="7" r="5" fill="var(--copper-fill)"/><line x1="11" y1="7" x2="32" y2="7" stroke="var(--copper-fill)" stroke-width="2"/><circle cx="38" cy="7" r="4.5" fill="none" stroke="var(--copper-fill)" stroke-width="2"/></svg>
+    <span class="eyebrow">Фонд Integrity · октябрь</span>
+  </div>
+  <h1>Кто что делает в ближайший месяц</h1>
+  <p class="lead">Клиентов, текущих и новых, ведёт Екатерина Боронина по отработанному порядку. Мария Пупырева решает одну задачу: собирает дашборд владельца по клиентам фонда. Новое в онбординге одно: к первой встрече трекера с новым клиентом Кэт готовит презентацию по его цифрам.</p>
+  <div class="meta"><span>Версия от 13.10.2026</span><span>Действует до стратегической сессии</span><span>Вопросы — Кэт, CPO / COO</span></div>
+</header>
+
+<nav class="sections" aria-label="Разделы"><div class="row">
+  <a href="#split">Екатерина и Мария</a><a href="#maria">Задача Марии</a><a href="#new">Новый клиент</a><a href="#team">Остальные</a><a href="#rules">Правила</a>
+</div></nav>
+
+<main class="wrap" style="margin-top:40px">
+
+  <section aria-label="Главное">
+    <div class="thesis">
+      <div class="th"><span class="who">Клиенты</span><b>Ведёт Екатерина Боронина</b><p>Все текущие и все новые клиенты. Онбординг, сервис, РНП, ЦК — как сейчас.</p></div>
+      <div class="th cu"><span class="who">Цифры</span><b>Собирает Мария Пупырева</b><p>Одна задача на месяц: дашборд владельца по клиентам фонда, клиент за клиентом.</p></div>
+      <div class="th"><span class="who">Первая встреча</span><b>Презентацию готовит Кэт</b><p>Для каждого нового клиента — к первой встрече трекера, по его цифрам.</p></div>
+    </div>
+  </section>
+
+  <section id="split">
+    <div class="sec-head"><span class="eyebrow">Разделение</span><h2>Екатерина и Мария</h2><p>Зоны не пересекаются. Общая точка одна — данные клиента: Мария сначала берёт то, что уже собрала команда.</p></div>
+    <div class="split">
+      <article class="lane k">
+        <span class="tag">Ведёт клиентов</span>
+        <h3>Екатерина Боронина</h3>
+        <span class="pos">Руководитель ЦК · помощник — Эля Надршина</span>
+        <p class="one">Все клиенты фонда, текущие и новые.</p>
+        <span class="lbl">Делает</span>
+        <ul>
+          <li>онбординг новых клиентов по текущему порядку;</li>
+          <li>аккаунтинг и сервис по клиентам;</li>
+          <li>РНП клиентов вместе с бизнес-инженерами;</li>
+          <li>Центр компетенций: тикеты, эксперты, подрядчики;</li>
+          <li>передаёт Марии то, что уже собрано по клиенту.</li>
+        </ul>
+        <span class="lbl">Не делает</span>
+        <ul class="not"><li>дашборд владельца — это задача Марии.</li></ul>
+      </article>
+
+      <div class="joint" aria-label="Стык зон">
+        <div class="box"><b>Данные клиента</b><span>Мария → команда: Амина, Артём, Екатерина</span></div>
+        <div class="box"><b>Если данных нет</b><span>Мария → клиент, в общем чате</span></div>
+      </div>
+
+      <article class="lane m">
+        <span class="tag">Собирает цифры</span>
+        <h3>Мария Пупырева</h3>
+        <span class="pos">Бизнес-инженер · подчиняется Кэт</span>
+        <p class="one">Дашборд владельца по клиентам фонда.</p>
+        <span class="lbl">Делает</span>
+        <ul>
+          <li>погружается в клиентов через записи встреч;</li>
+          <li>вместе с командой клиента собирает цифры в дашборд;</li>
+          <li>после встреч Евгения с клиентом переносит договорённости в дашборд;</li>
+          <li>сверяет цифры с трекером клиента;</li>
+          <li>помогает клиентам заполнять их таблицы.</li>
+        </ul>
+        <span class="lbl">Пока не делает</span>
+        <ul class="not"><li>не ведёт клиентов и не онбордит новых;</li><li>не строит и не правит РНП;</li><li>не отвечает в чатах за команду.</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="maria">
+    <div class="sec-head"><span class="eyebrow">Фокус месяца</span><h2>Задача Марии: маршрут</h2><p>Одна задача от начала до конца, без параллельных. Клиенты разные, поэтому рычаги и нормативы у каждого свои: шаблон общий, наполнение — под клиента.</p></div>
+    <div class="route">
+      <div class="stop first"><span class="dot">1</span><b>Погружение</b><p>Записи встреч, знакомство с командой, Мария в чатах клиентов</p></div>
+      <div class="stop"><span class="dot">2</span><b>Рыбак</b><p>Знакомство с финансистом и опердиром, несколько часов работы над цифрами</p></div>
+      <div class="stop"><span class="dot">3</span><b>Напор</b><p>Тот же порядок</p></div>
+      <div class="stop"><span class="dot">4</span><b>WELCS</b><p>Тот же порядок</p></div>
+      <div class="stop"><span class="dot">5</span><b>Остальные клиенты</b><p>По очереди, с трекером каждого клиента</p></div>
+    </div>
+    <div class="cols2">
+      <div class="card">
+        <h3>Что посмотреть в первую очередь</h3>
+        <ul>
+          <li>созвон с Михаилом Дашкиевым (прошлый четверг);</li>
+          <li>встреча с NOIMA;</li>
+          <li>встреча с Напором;</li>
+          <li>встреча с Рыбаком;</li>
+          <li>встреча с WELCS (Евгений и Михаил Дашкиев).</li>
+        </ul>
+        <p class="muted" style="font-size:13.5px">Недостающие записи присылает Амина.</p>
+      </div>
+      <div class="card">
+        <h3>Что понять про путь клиента</h3>
+        <div class="forks">
+          <div class="fork"><b>Дашборд владельца</b><span>главные цифры собственника</span></div>
+          <div class="fork"><b>Базовая база</b><span>сначала собрать основу</span></div>
+          <div class="fork"><b>Операционный трекинг</b><span>работа с командой клиента</span></div>
+          <div class="fork"><b>Только с владельцем</b><span>работа с собственниками</span></div>
+        </div>
+        <p class="muted" style="font-size:13.5px">Какой клиент на какой развилке — разбирает с трекером.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="new">
+    <div class="sec-head"><span class="eyebrow">Онбординг</span><h2>Новый клиент: что меняется</h2><p>Порядок прежний. Добавляется один шаг — презентация по цифрам клиента к первой встрече с трекером.</p></div>
+    <div class="flow">
+      <div class="st"><span class="n">Шаг 1</span><b>Онбординг</b><span class="who">Екатерина, Амина, Эля</span><p>Как сейчас: чат, кабинет, знакомство, сбор документов.</p></div>
+      <div class="st"><span class="n">Шаг 2</span><b>Материалы</b><span class="who">Екатерина, Артём → Кэт</span><p>Документы и цифры клиента, собранные на старте.</p></div>
+      <div class="st new"><span class="badge">новое</span><span class="n">Шаг 3</span><b>Презентация</b><span class="who">Кэт</span><p>Цифры клиента, точка А по имеющимся данным, черновик цели, следующие шаги.</p></div>
+      <div class="st"><span class="n">Шаг 4</span><b>Первая встреча</b><span class="who">Трекер</span><p>Трекер приходит подготовленным и ведёт встречу по презентации.</p></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="sec-head"><span class="eyebrow">Команда</span><h2>Остальные на этот месяц</h2></div>
+    <div class="people">
+      <div class="p"><b>Трекеры</b><span class="pos">Гор, Александр Алёшин, Владимир Сабреев</span><p>Главные по клиенту. Представляют Марию своим клиентам, сверяют с ней цифры.</p></div>
+      <div class="p"><b>Евгений Дубровин</b><span class="pos">CEO</span><p>Знакомит Марию с командами клиентов, начиная с Рыбака.</p></div>
+      <div class="p"><b>Кэт</b><span class="pos">CPO / COO</span><p>Руководит Марией, отвечает за шаблон дашборда и презентации к первым встречам.</p></div>
+      <div class="p"><b>Амина</b><span class="pos">Менеджер сервиса</span><p>Сервис как сейчас. Даёт Марии записи и уже собранные данные.</p></div>
+      <div class="p"><b>Эля Надршина</b><span class="pos">Диспетчер ЦК</span><p>Основной помощник Екатерины, тикеты ЦК.</p></div>
+      <div class="p"><b>Артём Белов</b><span class="pos">Финансы</span><p>Как сейчас. Даёт Марии финансовые цифры клиентов и материалы к презентациям.</p></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="sec-head"><span class="eyebrow">Правила</span><h2>Как работаем с данными</h2></div>
+    <ol class="rules">
+      <li>Прежде чем писать клиенту, Мария проверяет, нет ли данных у Амины, Артёма или Екатерины.</li>
+      <li>Запрос клиенту — в общем чате, чтобы видели трекер и команда.</li>
+      <li>Отдельных таблиц клиенту не рассылаем: один дашборд и один файл на каждый источник.</li>
+      <li>Решения по сути клиента принимает трекер.</li>
+    </ol>
+    <p class="note"><b>Дальше.</b> Зоны ответственности на следующий период определяем на стратегической сессии команды. До неё работаем так.</p>
+  </section>
+
+  <footer>Версия обновляется по мере решений. Правки — Кэт.</footer>
+</main>
+
+</body></html>
